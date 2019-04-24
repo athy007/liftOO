@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_m"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Login"
+            android:textSize="40dp" />
+
+
+        <EditText
+            android:id="@+id/log_email"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+
+            android:drawableLeft="@drawable/email_ico"
+            android:drawablePadding="15dp"
+            android:hint="Email Adress"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/log_pass"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+
+            android:drawableLeft="@drawable/lock_ico"
+            android:drawablePadding="15dp"
+            android:hint="Pass code "
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/round"
+            android:textStyle="bold"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:text="Login"
+            android:textColor="#222" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fblog"
+                android:drawableRight="@drawable/facebook_logo"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/circle_form"
+                />
+
+            <Button
+                android:drawableRight="@drawable/google"
+                android:layout_marginTop="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/circle_form"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="18dp"
+
+            android:textColor="#fff"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="not a member yet ?"
+            android:textSize="18dp"
+
+            android:textColor="#fff"
+            />
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/model_round_stroke"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:text="Sign up"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

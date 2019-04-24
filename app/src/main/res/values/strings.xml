@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">liftOO</string>
+    <string name="facebook_app_id">326114461437744</string>
+    <string name="fb_login_protocol_scheme">fb326114461437744</string>
+
+</resources>
