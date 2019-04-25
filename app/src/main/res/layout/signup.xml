@@ -65,17 +65,7 @@
             android:layout_marginBottom="10dp"
             android:id="@+id/pass"/>
 
-        <EditText
-            android:drawableLeft="@drawable/lock_ico"
-            android:drawablePadding="10dp"
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:padding="15dp"
-            android:hint="Pass code Verify"
-            android:inputType="textPassword"
-            android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:id="@+id/pass2"/>
+
 
         <Button
             android:drawablePadding="10dp"
@@ -97,12 +87,13 @@
             android:gravity="center_horizontal"
             >
 
-            <Button
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fblog"
                 android:drawableRight="@drawable/facebook_logo"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
                 android:gravity="center_horizontal"
                 android:background="@drawable/circle_form"
                 />
