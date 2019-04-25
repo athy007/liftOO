@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,9 @@ public class HomeActivity extends Activity {
     LoginButton loginButton;
 
     CallbackManager callbackManager;
+
+    EditText txt_Email,txt_Pass;
+    Button btn_login;
 
 
 
@@ -81,6 +85,46 @@ public class HomeActivity extends Activity {
             }
         });
 
+        txt_Email = findViewById(R.id.log_email);
+        txt_Pass = findViewById(R.id.log_pass);
+        btn_login= findViewById(R.id.login);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final String email =txt_Email.getText().toString();
+                final String password =txt_Pass.getText().toString();
+
+                if (email.isEmpty()){
+                    Toast.makeText(HomeActivity.this, "Please enter Email", Toast.LENGTH_SHORT).show();
+                }
+                if (password.isEmpty()){
+                    Toast.makeText(HomeActivity.this, "Please enter the password", Toast.LENGTH_SHORT).show();
+                }
+                if (password.length()<6){
+                    Toast.makeText(HomeActivity.this, "the password is too short", Toast.LENGTH_SHORT).show();
+                }
+
+
+                auth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(HomeActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    startActivity(new Intent(getApplicationContext(),mapActivity.class));
+
+                                } else {
+
+                                    Toast.makeText(HomeActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                }
+
+                                // ...
+                            }
+                        });
+
+            }
+        });
 
     }
 

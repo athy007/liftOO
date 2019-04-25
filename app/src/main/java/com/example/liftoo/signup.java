@@ -65,6 +65,9 @@ public class signup extends Activity {
                 if (fullName.isEmpty()){
                     Toast.makeText(signup.this, "Please enter names", Toast.LENGTH_SHORT).show();
                 }
+                if (password.length()<6){
+                    Toast.makeText(signup.this, "the password is too short", Toast.LENGTH_SHORT).show();
+                }
 
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
