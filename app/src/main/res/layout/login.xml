@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="Login"
@@ -64,28 +64,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center_horizontal"
             >
 
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/fblog"
-                android:drawableRight="@drawable/facebook_logo"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:gravity="center_horizontal"
-                android:background="@drawable/circle_form"
-                />
 
-            <Button
-                android:drawableRight="@drawable/google"
-                android:layout_marginTop="10dp"
-                android:layout_width="40dp"
+
+                android:layout_marginTop="15dp"
+                android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:gravity="center_horizontal"
-                android:background="@drawable/circle_form"
+
+                />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_google"
+
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+
                 />
         </LinearLayout>
 
@@ -93,7 +94,7 @@
             android:id="@+id/txt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text=""

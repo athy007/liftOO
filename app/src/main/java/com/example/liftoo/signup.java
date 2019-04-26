@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends Activity {
 
-    private Button btn;
+
     EditText txt_FullName,txt_Email,txt_Pass;
     Button Register;
 
@@ -32,18 +32,13 @@ public class signup extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-        btn =  findViewById(R.id.sign_up);
+
         txt_FullName = findViewById(R.id.names);
         txt_Email =findViewById(R.id.email);
         txt_Pass = findViewById(R.id.pass);
         Register = findViewById(R.id.validate);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openLogin();
-            }
-        });
+
 
         databaseReference = FirebaseDatabase.getInstance().getReference("User");
         firebaseAuth = FirebaseAuth.getInstance();
@@ -52,9 +47,9 @@ public class signup extends Activity {
             @Override
             public void onClick(View v) {
 
-                final String fullName = txt_FullName.getText().toString();
-                final String email =txt_Email.getText().toString();
-                final String password =txt_Pass.getText().toString();
+                final String fullName = txt_FullName.getText().toString().trim();
+                final String email =txt_Email.getText().toString().trim();
+                final String password =txt_Pass.getText().toString().trim();
 
                 if (email.isEmpty()){
                     Toast.makeText(signup.this, "Please enter Email", Toast.LENGTH_SHORT).show();
@@ -105,10 +100,5 @@ public class signup extends Activity {
     }
 
 
-    public void openLogin(){
 
-        Intent intent = new Intent(this,HomeActivity.class);
-        startActivity(intent);
-
-    }
 }
